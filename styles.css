@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 250px;
+    height: 250px;
+
+}
+.nowrap {
+    white-space: nowrap;
+}
+html {
+    scroll-behavior: smooth;
+    
+}
+body {
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    min-height: 100vh;
+    background-color: lightpink;
+    background-image: radial-gradient(whitesmoke,lightpink);
+    display: flex;
+    flex-direction: column;    
+}
+header,
+footer {
+    position: sticky;
+    background-color:rgba(0, 0, 0, 0.611);
+    color: whitesmoke;
+    text-align: center;
+
+}
+header{
+    top:0;
+}
+nav{
+    background-color: rgba(245, 245, 245, 0.937);
+    padding: 8px;
+    border-bottom: 1px dotted black;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+nav a, nav a:visited {
+    color:black;
+}
+nav a:hover, nav a:focus{
+    color: hsla(0, 73%, 44%, 0.6)
+}
+
+main{
+    flex-grow: 1;
+    /* flex-grow fill out the page no matter what */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 1rem;
+}
+footer{
+    bottom: 0;
+}
+.card{
+    scroll-margin-top: 300px;
+    width: min(100%,350px);
+    background-color: #e78caca3;
+    border: 2px solid rgba(0, 0, 0, 0.645);
+    border-radius: 15px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.card figure {
+    display: flex;
+    flex-flow: column nowrap;
+    
+}
+.card img {
+    border: 2px solid rgba(0, 0, 0, 0.656);
+    border-radius: 50%;
+}
+.card figcaption {
+    font-weight: bolder;
+    font-size: 32px;
+    margin: 16px;
+    text-align: center;
+}
+@media screen and (min-width: 576px) {
+    main {
+        justify-content: center;
+        flex-flow: row wrap;
+        padding: 16px
+    }
+    .card {
+        width: min(100%, 400px);
+    }
+    .card:last-child {
+        order: -1;
+    }
+    @media screen and (min-width: 768px) {
+        nav {
+            display: none;
+
+        }
+        .card {
+            width: min(100%, 325px);
+        }
+        .card figure {
+            flex-flow: column-reverse;
+        }
+        .card figcaption {
+            margin: 2px 0;
+        }
+        .card p {
+            margin-top: 16px;
+        }
+    }
+    @media screen and (min-width: 992px) {
+        .card {
+            width: min(100%, 400px);
+
+        }
+        .card:nth-child(2) {
+            order: -1;
+        }
+    }
+    
+
+    
+}
