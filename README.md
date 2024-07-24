@@ -1,4 +1,4 @@
-Hey everyone!
+# Anime-Staff-Cards
 
 I made these cute little profile cards for anime images (♡) as a fun way to test out all the CSS properties I've been learning. And guess what? I didn't expect it to turn out this adorable, haha!😄
 
